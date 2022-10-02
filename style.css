@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root {
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    --white:  hsl(0, 0%, 100%);
+    --light-graylish-violet-app-bg: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet-button-bg: hsl(271, 36%, 24%);
+    --very-light-magenta-radio-button: hsl(289, 100%, 72%);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    background-color: var(--light-graylish-violet-app-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: calc(100vh - 0.1px);
+    position: relative;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile {
+    border-radius: 32px;
+    border: 15px solid var(--white);
+    width: 320px;
+    position: relative;
+    margin: 30px 10px 10px 60px;
+    /* max-width: 100%; */
+    margin-right: 100px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    /* min-height: calc(50vh - 20px); */
+}
+
+.mobile-header {
+    background: linear-gradient(to right, hsl(264,100%,61%),hsl(293,100%,63%));
+    height: 75px;
+    border-radius: 20px 20px 0 0;
+}
+
+.mobile-header::before {
+    content: '';
+    background-color: var(--white);
+    position: absolute;
+    border-radius: 0 0 16px 16px;
+    top: 0;
+    left: 50%;
+    width: 150px;
+    height: 20px;
+    transform: translateX(-50%);
+}
+
+.header-desc {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px 20px 0;
+}
+
+.header-chevron {
+    margin-right: 15px;
+    position: relative;
+}
+
+.header-chevron::before {
+    content: '';
+    background-color: var(--white);
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 3px;
+    height: 8px;
+    transform: skew(-28deg, 0deg);
+}
+
+.header-chevron::after {
+    content: '';
+    background-color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 8px;
+    transform: skew(28deg, 0deg);
+}
+
+.header-avatar {
+    margin-right: 15px;
+}
+
+.header-avatar img {
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.header-infor {
+    color: var(--white);
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.header-infor h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.header-infor p {
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.header-dots {
+    opacity: 0.7;
+    position: relative;
+    margin-left: auto;
+    background-color: var(--white);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+}
+
+.header-dots::before {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    top: -5px;
+    left: 0px;
+}
+
+.header-dots::after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    top: 5px;
+    left: 0px
+}
+
+.mobile-messages {
+    background-color: var(--light-graylish-violet-app-bg);
+    padding: 15px 10px 5px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px 5px 10px 10px;
+}
+
+.messages-reply {
+    background-color: #ede5f4;
+    color: var(--light-magenta);
+    border-radius: 10px 10px 10px 0px;
+    max-width: 52%;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-left: 4px;
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.messages-images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 4px;
+    margin-bottom: 14px;
+}
+
+.messages-images img {
+    width: 50px;
+    border-radius: 25%;
+}
+
+.messages-images img:nth-child(2),
+.messages-images img:last-child {
+    margin-left: 10px;
+}
+
+.messages-forward {
+    background-color: var(--white);
+    max-width: 53%;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    margin-right: 4px;
+    margin-left: auto;
+    font-size: 9px;
+    color: var(--very-dark-desaturated-violet-button-bg);
+}
+
+.messages-offer {
+    max-width: 65%;
+    background: linear-gradient(to right, hsl(293,100%,63%), hsl(264,100%,61%));
+    margin-left: 4px;
+    padding: 5px;
+    border-radius: 10px 10px 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.messages-offer div {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--white);
+    opacity: 0.6;
+}
+
+.messages-offer p {
+    color: var(--white);
+    font-size: 9px;
+    opacity: 0.6;
+    margin-left: 10px;
+}
+
+.messages-offer span {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: auto;
+    color: var(--white);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-top: 10px;   
+}
+
+form input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.form-arrow {
+    font-size: 30px;
+    color: var(--white);
+    background-color: black;
+    border-radius: 50%;
+    z-index: 100;
+    cursor: pointer;
+    padding: 0px 11px;
+    height: 36px;
+    margin-left: -45px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.information {
+    width: 400px;
+    margin-left: 20px;
+}
+
+.information h1 {
+    color: rgb(55 36 66);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.information p {
+    opacity: 0.6;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.bg-top {
+    position: absolute;
+    background: linear-gradient(to right, hsl(264,100%,61%),hsl(293,100%,63%));
+    width: 520px;
+    height: 690px;
+    top: 0;
+    left: -100px;
+    z-index: -999;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+}
+
+.bg-bottom {
+    position: absolute;
+    background-color: #f3edf9;
+    width: 350px;
+    height: 650px;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+    border-top-left-radius: 300px;
+    /* border-top-right-radius: 250px; */
+}
+
